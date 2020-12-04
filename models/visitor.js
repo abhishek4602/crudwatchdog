@@ -6,7 +6,7 @@ const visitorSchema = new mongoose.Schema({
     vehicleNumberVisitor:String,
     timeStamp:String,
     visitorType:String
-    // visitorDestinationFlat:{
+    // visitorDestinationFlat:{ 
     //     type:String,
     //   //  required:true
     // },
