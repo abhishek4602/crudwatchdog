@@ -52,4 +52,4 @@ app.post('/putdata',async(req,res)=>{
 const watchdogrouter_2=require('./routers/watchdogrouter')
 app.use('/watchdog',watchdogrouter_2)
 
-app.listen(9000,() => {console.log('Success 8000')})
+app.listen(process.env.PORT ||9000,() => {console.log('Success 8000')})
