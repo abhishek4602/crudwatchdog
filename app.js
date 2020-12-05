@@ -34,7 +34,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/putdata',async(req,res)=>{
     
-    console.log('Got body:', req.body);
+    console.log('Got body:', req.body); 
     const visitor= new Visitor({
         nameVisitor : req.body.nameVisitor,
         tempVisitor : req.body.tempVisitor,
