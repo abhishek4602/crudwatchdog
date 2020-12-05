@@ -1,13 +1,15 @@
 const express = require ('express')
 const mongoose= require ('mongoose')
-
+// const favicon = require('express-favicon');
 const Visitor= require('./models/visitor')
+var favicon = require('serve-favicon')
+var path = require('path')
 //db password= dV9ebXYfpnxYi8D
 //heroku password = UEcbQ;P7`:~p~jA (doesnt include '=')
 const app=express()
 
- 
-
+// app.use(favicon(__dirname + './assets/favicon.png'));
+app.use(favicon(path.join(__dirname, 'assets', 'favicon.ico')))
 mongoose
 .connect('mongodb+srv://Abhishek:dV9ebXYfpnxYi8D@cluster0.xep43.mongodb.net/test?retryWrites=true&w=majority',
     {
