@@ -2,9 +2,12 @@ const express = require ('express')
 const mongoose= require ('mongoose')
 // const favicon = require('express-favicon');
 const Visitor= require('./models/visitor')
+<<<<<<< HEAD
 const Task= require('./models/task_model')
 const SubTask= require('./models/subTask_model')
 const User=require('./models/user_model')
+=======
+>>>>>>> b9602ed490c541204e58dc581dcb90bee91167cc
 var favicon = require('serve-favicon')
 var path = require('path')
 //db password= dV9ebXYfpnxYi8D
@@ -37,6 +40,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.post('/postnewtask',async(req,res)=>{
     
+<<<<<<< HEAD
 
 //task
     // taskID:String,
@@ -68,6 +72,16 @@ app.post('/postnewtask',async(req,res)=>{
         taskStatus : req.body.taskStatus,
         taskTargetDate : req.body.taskTargetDate,
         taskTargetTime : req.body.taskTargetTime
+=======
+    console.log('Got body:', req.body); 
+    const visitor= new Visitor({
+        nameVisitor : req.body.nameVisitor,
+        tempVisitor : req.body.tempVisitor,
+        destinationFlatVisitor : req.body.destinationFlatVisitor,
+        vehicleNumberVisitor : req.body.vehicleNumberVisitor,
+        timeStamp : req.body.timeStamp,
+        visitorType : req.body.visitorType
+>>>>>>> b9602ed490c541204e58dc581dcb90bee91167cc
         })
         const subtask= new SubTask({
             subTaskID : req.body.subTaskID,
